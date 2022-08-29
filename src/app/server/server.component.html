@@ -1,0 +1,73 @@
+<label>User Name</label>
+
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName"
+>
+
+<!--<p>{{userName}}</p>-->
+
+<br/>
+
+<p class="card-name"
+   *ngIf="userNameCard;
+    else noName">
+  {{userName}}
+</p>
+<ng-template #noName>
+  <p>Please, enter your name</p>
+</ng-template>
+
+<button class="btn btn-primary"
+        [disabled]="userName===''"
+        (click)="onClickAddUserNameToCard()">
+  Submit
+
+</button>
+
+<button
+  class="btn btn-primary"
+  [disabled]="userName===''"
+  (click)="onClickResetUserName()"
+>Reset user
+</button>
+
+<br/>
+
+<app-ed-comp
+  *ngFor="let user of users">
+</app-ed-comp>
+
+<br/><br/>
+<app-details></app-details>
+
+
+<!--<p class='title'>Server component</p>-->
+<!--<h3>Boo!</h3>-->
+
+
+<!--<label>Enter text here</label>-->
+<!--<br/>-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onTextInput($event)"-->
+<!--&gt;-->
+<!--<br/>-->
+<!--<button class="btn btn-primary"-->
+<!--        [disabled]="!btnClickMe"-->
+<!--        (click)='onCreateNewText()'>-->
+<!--  Click me!</button>-->
+<!--<hr>-->
+<!--<p>{{changeText}}</p>-->
+<!--<hr>-->
+<!--<br/>-->
+
+<!--<input-->
+<!--  type="text"-->
+<!--    [(ngModel)]="inputText"-->
+<!--&gt;-->
+
+
+

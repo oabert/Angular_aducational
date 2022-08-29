@@ -1,0 +1,14 @@
+h3{
+  color: mediumseagreen;
+}
+
+button{
+  margin-right: 5px;
+}
+
+.card-name{
+  width: 300px;
+  height: 100px;
+  border: 2px solid darkslateblue;
+  z-index: 2;
+}

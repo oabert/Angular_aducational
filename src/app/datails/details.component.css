@@ -1,0 +1,7 @@
+.cornsilk-text{
+  color: cornsilk;
+}
+.display{
+  display: flex;
+  gap: 15px;
+}

@@ -1,0 +1,46 @@
+<!--/* easy toggling */-->
+<!--<button-->
+<!--  class="btn btn-primary"-->
+<!--  (click)="showDetails=!showDetails"-->
+<!--&gt;-->
+<!--  Display Details-->
+<!--</button>-->
+<div class="display">
+  <button
+    class="btn btn-primary"
+    (click)="onDisplayDetails()"
+  >
+    Display Details
+  </button>
+
+  <p
+    *ngIf="showDetails"
+  >
+    This p shows details
+  </p>
+</div>
+
+<br/>
+<!--<ng-template >-->
+
+<!--//v1 (let o = odd, let e = even)-->
+
+<div
+  *ngFor="let logNumber of log; let o = odd"
+  [ngStyle]="{backgroundColor: o ? 'aqua' : 'darkblue'}"
+  [ngClass]="{'cornsilk-text': !o}"
+>
+
+{{logNumber}}</div>
+<!--</ng-template>-->
+
+<!--//v2-->
+
+<!--*ngFor="let logNumber of log; let i = index"-->
+<!--[ngStyle]="{backgroundColor: i%2==0 ? 'aqua' : 'darkblue'}"-->
+<!--[ngClass]="{'cornsilk-text': i%2!==0}"-->
+
+<!--//v3-->
+
+<!--  [ngStyle]="{backgroundColor: logNumber%2==0 ? 'aqua' : 'darkblue'}"-->
+<!--  [ngClass]="{'cornsilk-text': logNumber%2!==0}"-->

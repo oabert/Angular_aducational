@@ -1,0 +1,14 @@
+p{
+  color: blue;
+}
+
+.odd-even{
+  display: flex;
+  border-style: inset;
+  height: 100px;
+  width: 200px;
+}
+
+button{
+  margin-bottom: 10px;
+}
